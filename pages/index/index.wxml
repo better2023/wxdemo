@@ -1,0 +1,14 @@
+<view class="container">
+  <!-- 手机号输入框 -->
+  <input type="number" placeholder="请输入手机号" bindinput="onInputPhone" value="{{phone}}" class="input-phone"/>
+  <!-- 获取验证码按钮 -->
+  <button bindtap="onGetCode" disabled="{{disableGetCode}}" class="btn-getcode">{{getCodeText}}</button>
+  <!-- 验证码输入框 -->
+  <input type="number" placeholder="请输入验证码" bindinput="onInputCode" value="{{code}}" class="input-code"/>
+  <!-- 用户条款 -->
+  <checkbox-group bindchange="onAgree">
+    <label class="label-agree"><checkbox value="{{agree}}" class="checkbox-agree"/>我已阅读并同意用户条款</label>
+  </checkbox-group>
+  <!-- 下一步按钮 -->
+  <button bindtap="onNext" disabled="{{!canNext}}" class="btn-next">下一步</button>
+</view>
